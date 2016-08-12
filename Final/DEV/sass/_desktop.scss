@@ -1,48 +1,26 @@
-@media screen and (min-width: 0px) {
-
-
-body {
-    font-family: Arial, sans-serif;
-    font-size: Large;
-}
+@media screen and (min-width: 850px) {
 
 h1 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    Font-weight: bold;
-    text-align: center;
-    background-color: #396304;
-    color: #f2f2f2;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-img#desktopimage {
-  display: none;
-}
-img#mobileimage {
-  height: 60%;
-  width: 60%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 15px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 15px;
 }
 
 article#intro p {
-  padding: 20px;
-}
-article.results {
- text-align: center;
+  padding: 0px;
 }
 
  a#begin {
-  background-color: #000;
+  background-color: #396304;
   padding: 15px 30px;
   text-decoration: none;
   color: #f2f2f2;
 }
 
 a#begin:hover {
-  background-color: #000;
+  background-color: #333;
   color: #1d9ed5;
 }
 
@@ -51,7 +29,7 @@ article#intro {
 }
 
 #socksleuth {
-    width: 100%;
+    width: 50%;
     margin: 0 auto;
     color: #000;
 }
@@ -175,8 +153,8 @@ ul li.image label{
 ul li.image {
   float: left;
   width: 48.5%;
-  margin-bottom: 5px;
-  margin-left: 5px;
+  margin-bottom: 100px;
+  margin-left: 3px;
   background-color: #f2f2f2;
    p {
      padding-left: 5px;
@@ -251,6 +229,7 @@ ul li .checkbox::before {
 
 
 
+
 input[type=radio]:checked ~ .check {
   border: 3px solid #333;
   background-color: #333;
@@ -282,5 +261,4 @@ input[type=checkbox]:checked ~ label{
   color: #1d9ed5;
 
 }
-
 }
