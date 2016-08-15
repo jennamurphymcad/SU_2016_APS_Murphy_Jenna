@@ -24,7 +24,15 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-}
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+      }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -104,7 +112,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-  
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

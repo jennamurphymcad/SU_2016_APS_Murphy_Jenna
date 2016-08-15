@@ -36,36 +36,97 @@
 <?php
 
 
-$userBrand = $_GET['brand'];
-$userFeature = $_GET['feature'];
-$userActivity = $_GET['activity'];
 
-echo $userBrand;
-echo $userFeature;
-echo $userActivity;
+if (isset($_GET['brand'])) {
+  $userBrand = $_GET['brand'];
+} else {
+  $userBrand = null;
+}
 
-$socks = fetchFromDB('SELECT * FROM socks
-  NATURAL JOIN sock_brands
-  NATURAL JOIN sock_activity
-  NATURAL JOIN sock_feature
-  WHERE brandID = '.$userBrand.'
-  AND featureID = '.$userFeature.'
-  AND activityID = '.$userActivity);
+if (isset($_GET['feature'])) {
+  $userFeature = $_GET['feature'];
+} else {
+  $userFeature = null;
+}
 
-foreach($socks as $sock) {
-  echo "<h1>".$sock['sockNAME']."</h1>";
-  echo "<ul>";
-  echo "<li>".$sock['sockDESC']."</li>";
-  echo "<li>".$sock['sockACTIVEPRICE']."</li>";
-  echo "</ul>";
+if (isset($_GET['activity'])) {
+  $userActivity = $_GET['activity'];
+} else {
+  $userActivity = null;
+}
 
+if (isset($_GET['height'])) {
+  $userHeight = $_GET['height'];
+} else {
+  $userHeight = null;
+}
+
+if (isset($_GET['specialty'])) {
+  $userSpecialty = $_GET['specialty'];
+} else {
+  $userSpecialty = null;
+}
+
+
+//$userBrand = $_GET['brand'];
+// $userFeature = $_GET['feature'];
+// $userActivity = $_GET['activity'];
+
+// echo $userBrand;
+// echo "<br />";
+// echo $userFeature;
+// echo "<br />";
+// echo $userActivity;
+// echo "<br />";
+// echo $userHeight;
+// echo "<br />";
+// echo $userSpecialty;
+// echo "<br />";
+
+//
+// echo createJoinString($userBrand,$userFeature,$userActivity,$userHeight,$userSpecialty);
+$joinString = createJoinString($userBrand,$userFeature,$userActivity,$userHeight,$userSpecialty);
+
+// echo "<br />";
+// echo createWhereString($userBrand,$userFeature,$userActivity,$userHeight,$userSpecialty);
+$whereString = createWhereString($userBrand,$userFeature,$userActivity,$userHeight,$userSpecialty);
+//
+// echo "<br />";
+
+$db_query = "SELECT * FROM socks " . $joinString . " " . $whereString;
+
+// echo $db_query;
+// echo "<br />";
+// echo "<br />";
+// echo "<br />";
+
+
+
+$socks = fetchFromDB($db_query);
+
+if (count($socks)) {
+  foreach($socks as $sock) {
+    echo "<article class='listing'>";
+    echo "<h2>".$sock['sockNAME']."</h2>";
+    echo "<img src='".$sock['sockIMG']."'alt ='".$sock['sockIMGALT']."'>";
+    echo "<p class='desc'>".$sock['sockDESC']."</p>";
+    echo "<p class='price'>&#36;".$sock['sockPRICEACTIVE']."</p>";
+    echo "</article>";
+  }
+} else {
+  echo "<h2>Sorry, 0 matches returned.</h2>";
+  // echo "<h1>".$sock['sockNAME']."</h1>";
+  // echo "<ul>";
+  // echo "<li>".$sock['sockDESC']."</li>";
+  // echo "<li>".$sock['sockPRICEACTIVE']."</li>";
+  // echo "</ul>";
 }
 
 
 
  ?>
  <!-- Insert php call to access database for return results -->
- <div class='button'><a id="begin" href='index.php'>Try Again</a></div>
+ <div class='button'><a id="begin" href='index.html'>Try Again</a></div>
 </article>
 
 

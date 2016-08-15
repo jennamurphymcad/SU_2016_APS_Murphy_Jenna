@@ -1,14 +1,15 @@
 <?php
 
   require 'functions.php';
-  $queryString = drawQueryString();
+
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>GoBros Sock Sleuth | Question 1</title>
+        <title>GoBros Sock Sleuth | Question 2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/css.css">
@@ -18,16 +19,16 @@
     <body>
       <section id='socksleuth'>
         <header>
-          <a href="../../index.html"><img src="img/socksleuthbannerdesktop.jpg" alt="Sock Sleuth Banner"  id="desktopimage"></a>
-          <a href="../../index.html"><img src="img/Socksleuthsmallbanner.jpg" alt="Sock Sleuth Banner" id="mobileimage"></a>
-          <h1>When your sock ventures outdoors, what does it like to do?</h1>
+          <a href="index.html"><img src="img/socksleuthbannerdesktop.jpg" alt="Sock Sleuth Banner"  id="desktopimage"></a>
+          <a href="index.html"><img src="img/Socksleuthsmallbanner.jpg" alt="Sock Sleuth Banner" id="mobileimage"></a>
+          <h1>If your sock was an animal, which would it be?</h1>
         </header>
 
   <article>
     <ul>
       <li>
         <input type="radio" id="radio1" name="selector">
-        <label for="radio1"><a href="brand.php<?php echo $queryString; ?>activity=2">Running</a></label>
+        <label for="radio1"><a href="Question3.php<?php echo drawQueryString("height",6); ?>">Giraffe</a></label>
 
         <div class="check"></div>
       </li>
@@ -35,21 +36,21 @@
 
     <li>
       <input type="radio" id="radio2" name="selector">
-      <label for="radio2"><a href="brand.php<?php echo $queryString; ?>activity=7">Tennis</a></label>
+      <label for="radio2"><a href="Question3.php<?php echo drawQueryString("activity",2); ?>">Cheetah</a></label>
 
       <div class="check"></div>
     </li>
 
     <li>
       <input type="radio" id="radio3" name="selector">
-      <label for="radio3"><a href="brand.php<?php echo $queryString; ?>activity=8">Walking</a></label>
+      <label for="radio3"><a href="Question3.php<?php echo drawQueryString("feature",2); ?>">Fish</a></label>
 
       <div class="check"></div>
     </li>
 
     <li>
       <input type="radio" id="radio4" name="selector">
-      <label for="radio4"><a href="brand.php<?php echo $queryString; ?>activity=4">Hiking and Camping</a></label>
+      <label for="radio4"><a href="Question3.php<?php echo drawQueryString("activity",4); ?>">Bear</a></label>
 
       <div class="check"></div>
     </li>
@@ -57,7 +58,7 @@
 </article>
 
 
-<div class='button' id='prev'><a href='feature.php'><span class="arrow"><</span> Previous</a></div>
+<div class='button' id='prev'><a href='Question1.php'><span class="arrow"><</span> Previous</a></div>
 <!-- <div class='button' id='next'><a href='activity.php?'>Next Question <span class="arrow">></span></a></div> -->
 </section>
 
@@ -70,8 +71,6 @@
 
 <?php
 
-$userActivity = $_GET['activity'];
+// $userActivity = $_GET['activity'];
 
-
-echo $userActivity;
 ?>

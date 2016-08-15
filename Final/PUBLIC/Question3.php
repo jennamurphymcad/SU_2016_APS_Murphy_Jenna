@@ -2,7 +2,7 @@
 
   require 'functions.php';
 
-  $queryString = drawQueryString();
+
 
 ?>
 
@@ -23,14 +23,14 @@
         <header>
           <a href="index.html"><img src="img/socksleuthbannerdesktop.jpg" alt="Sock Sleuth Banner"  id="desktopimage"></a>
           <a href="index.html"><img src="img/Socksleuthsmallbanner.jpg" alt="Sock Sleuth Banner" id="mobileimage"></a>
-          <h1>What sock brands do you prefer?</h1>
+          <h1>Where would your sock like to wake up tomorrow?</h1>
         </header>
 
   <article>
     <ul>
       <li>
         <input type="radio" id="radio1" name="selector">
-        <label for="radio1"><a href="results.php<?php echo $queryString; ?>brand=6">Smartwool</a></label>
+        <label for="radio1"><a href="results.php<?php echo drawQueryString("specialty",3) ?>">An urban city</a></label>
 
         <div class="check"></div>
       </li>
@@ -38,14 +38,14 @@
 
     <li>
       <input type="radio" id="radio2" name="selector">
-      <label for="radio2"><a href="results.php<?php echo $queryString; ?>brand=1">Balega</a></label>
+      <label for="radio2"><a href="results.php<?php echo drawQueryString("activity",8) ?>">The beach</a></label>
 
       <div class="check"></div>
     </li>
 
     <li>
       <input type="radio" id="radio3" name="selector">
-      <label for="radio3"><a href="results.php<?php echo $queryString; ?>brand=3">Darn Tough</a></label>
+      <label for="radio3"><a href="results.php<?php echo drawQueryString("specailty",4) ?>">The moon</a></label>
 
       <div class="check"></div>
     </li>
@@ -54,7 +54,7 @@
 </article>
 
 
-<div class='button' id='prev'><a href='activity.php'><span class="arrow"><</span> Previous</a></div>
+<div class='button' id='prev'><a href='Question2.php'><span class="arrow"><</span> Previous</a></div>
 <!-- <div class='button' id='next'><a href='activity.php?'>Next Question <span class="arrow">></span></a></div> -->
 </section>
 
@@ -67,10 +67,10 @@
 
 <?php
 
-
-  $userBrand = $_GET['brand'];
-
-  echo $userBrand;
+  // 
+  // $userBrand = $_GET['brand'];
+  //
+  // echo $userBrand;
 
 
 ?>

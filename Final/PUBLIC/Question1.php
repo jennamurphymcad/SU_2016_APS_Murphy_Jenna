@@ -18,8 +18,8 @@
     <body>
       <section id='socksleuth'>
         <header>
-          <a href="../../index.html"><img src="img/socksleuthbannerdesktop.jpg" alt="Sock Sleuth Banner"  id="desktopimage"></a>
-          <a href="../../index.html"><img src="img/Socksleuthsmallbanner.jpg" alt="Sock Sleuth Banner" id="mobileimage"></a>
+          <a href="index.html"><img src="img/socksleuthbannerdesktop.jpg" alt="Sock Sleuth Banner"  id="desktopimage"></a>
+          <a href="index.html"><img src="img/Socksleuthsmallbanner.jpg" alt="Sock Sleuth Banner" id="mobileimage"></a>
           <h1>If your sock had a superpower, what would it be?</h1>
         </header>
 
@@ -27,7 +27,7 @@
     <ul>
       <li>
         <input type="radio" id="radio1" name="selector">
-        <label for="radio1"><a href="activity.php?feature=4">Night Vision</a></label>
+        <label for="radio1"><a href="Question2.php?activity=4">Master of ice and snow</a></label>
 
         <div class="check"></div>
       </li>
@@ -35,28 +35,28 @@
 
     <li>
       <input type="radio" id="radio2" name="selector">
-      <label for="radio2"><a href="activity.php?feature=6">Blister avenger</a></label>
+      <label for="radio2"><a href="Question2.php?feature=6">Blister avenger</a></label>
 
       <div class="check"></div>
     </li>
 
     <li>
       <input type="radio" id="radio3" name="selector">
-      <label for="radio3"><a href="activity.php?feature=5">Odor-free</a></label>
+      <label for="radio3"><a href="Question2.php?feature=5">Odor Fighter</a></label>
 
       <div class="check"></div>
     </li>
 
     <li>
       <input type="radio" id="radio4" name="selector">
-      <label for="radio4"><a href="activity.php?feature=9">Water-resistant</a></label>
+      <label for="radio4"><a href="Question2.php?height=2">Invisibility</a></label>
 
       <div class="check"></div>
     </li>
   </ul>
 </article>
 
-<div class='button' id='prev'><a href='index.php'><span class="arrow"><</span> Previous</a></div>
+<div class='button' id='prev'><a href='index.html'><span class="arrow"><</span> Previous</a></div>
 <!-- <div class='button' id='next'><a href='activity.php?'>Next Question <span class="arrow">></span></a></div> -->
 </section>
 
@@ -70,8 +70,8 @@
 
 <?php
 
-  $userFeature = $_GET['feature'];
-
-  echo $userFeature;
+  // $userFeature = $_GET['feature'];
+  //
+  // echo $userFeature;
 
 ?>
